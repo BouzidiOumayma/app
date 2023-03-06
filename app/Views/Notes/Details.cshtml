@@ -1,0 +1,42 @@
+﻿@model app.Models.Note
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Note</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Etudiant.Nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Etudiant.Nom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.matiere)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.matiere)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NoteValeur)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoteValeur)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
